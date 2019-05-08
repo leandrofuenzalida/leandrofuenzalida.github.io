@@ -3,13 +3,27 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1440px" height="868px" viewBox="0 0 1440 868" enable-background="new 0 0 1440 868" xml:space="preserve">
-<circle fill="#82FFB7" cx="1193.7" cy="456.492" r="83.852"/>
+<radialGradient id="SVGID_1_" cx="1099.0723" cy="360.1011" r="90.6546" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#82FF8A"/>
+	<stop  offset="0.9996" style="stop-color:#82FFB7"/>
+</radialGradient>
+<circle fill="url(#SVGID_1_)" cx="1165.201" cy="434" r="83.852"/>
+<radialGradient id="SVGID_2_" cx="421.5513" cy="440.417" r="94.477" gradientTransform="matrix(1 0 0 1.2343 4.882812e-04 -121.3423)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#82FF8A"/>
+	<stop  offset="0.9996" style="stop-color:#82FFB7"/>
+</radialGradient>
+<path fill="url(#SVGID_2_)" d="M486.141,409.986c46.31,0,97.603,73.576,98.41,108.706c1.077,46.901-52.1,98.293-98.41,98.293
+	c-46.311,0-83.853-46.337-83.853-103.498C402.289,456.325,439.831,409.986,486.141,409.986z"/>
 <title>background-noncreativeNONCREATIVE HOME V1.0 Copy</title>
 <desc>Created with Sketch.</desc>
-<path id="Path-10" fill="#82FFB7" d="M675.625,653.263c0,154.748-154.5,155.249-154.5,155.249s220.334,0,661,0v-311h-353
+<radialGradient id="Path-10_1_" cx="695.5918" cy="454.5898" r="289.1471" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#82FF8A"/>
+	<stop  offset="0.9996" style="stop-color:#82FFB7"/>
+</radialGradient>
+<path id="Path-10" fill="url(#Path-10_1_)" d="M675.625,653.263c0,154.748-154.5,155.249-154.5,155.249s220.334,0,661,0v-311h-353
 	C726.792,497.512,675.625,549.429,675.625,653.263z"/>
 <path id="Combined-Shape" fill="#424242" d="M1303.953,310.345c-136.047,0-43.953,126.691-197.748,125.96
-	c-153.794-0.732-223.838,0.731-223.838,154.778c0,102.698-82.681,153.794-248.043,153.289c-325.532,0-435.825,0-435.825,0
+	c-153.794-0.731-223.838,0.731-223.838,154.778c0,102.698-82.682,153.794-248.043,153.289c-325.532,0-435.825,0-435.825,0
 	S0,744.372,0,868.593C120,868.197,540.145,868,1260.432,868H1440c0-456.217,0-684.325,0-684.325S1440,310.345,1303.953,310.345z"/>
 <circle id="Oval-2" fill="#424242" cx="433.907" cy="511.185" r="130"/>
 </svg>
