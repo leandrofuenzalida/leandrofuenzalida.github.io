@@ -34,6 +34,7 @@ h1, h3, h2{
   height: 860px;
   padding: 0px 100px 0px 100px;
   background-image: url(/img/background-noncreative.svg);
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -162,6 +163,7 @@ input[placeholder] {
   padding-top:115px;
   color: #424242;
 }
+
 
 footer{
   width: 100%;
@@ -485,7 +487,7 @@ a:hover{
 /* MAX WIDTH 810 PX  - START */
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 480px) and (max-width : 700px) {
+@media only screen and (min-width : 480px) and (max-width : 850px) {
   
   header{
     width: 98%;
@@ -570,6 +572,33 @@ a:hover{
 }
 
 /* MAX WIDTH 320 PX  - END */
+
+
+@media only screen and (min-width :1450px) {
+
+  .description {
+    font-size: 28px;
+    color: #424242;
+    padding: 140px 40% 0px 0%;
+    line-height: 39px;
+  }
+
+  #content-right {
+    width: 55%;
+    display: block;
+    float: right;
+  }
+
+  .bigtitle {
+    font-size: 80px;
+    text-decoration: underline;
+    font-weight: 600 !important;
+    padding-left: 18%;
+    padding-top: 115px;
+    color: #424242;
+  }
+
+}
 
 /* padding-bottom and top for image */
 .mfp-no-margins img.mfp-img {
