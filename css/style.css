@@ -166,7 +166,8 @@ input[placeholder] {
 
 
 footer{
-  width: 100%;
+  width: 80%;
+  padding: 10px 10%;
   height: 130px;
   background-color: #82FFB7;
   color:#424242;
@@ -178,13 +179,11 @@ footer{
 }
 
 .footer-right-box{
-  width: 26%;
   float: right;
   padding: 52px 0px 0px 0px; 
 }
 
 .logo-footer{
-  padding-left: 100px;
   line-height:130px;
   font-weight: 700;
 }
@@ -354,6 +353,14 @@ a:hover{
     position:fixed;
     mix-blend-mode: difference;
   } 
+
+  footer{
+    width: 90%;
+    padding: 5px 5%;
+    height: 130px;
+    background-color: #82FFB7;
+    color:#424242;
+  }
   
   .content-1{
     height: 600px;
@@ -451,7 +458,6 @@ a:hover{
   }
   
   .footer-right-box{
-    width: 26%;
     float: right;
     padding: 52px 0px 0px 0px; 
   }
@@ -468,12 +474,11 @@ a:hover{
   }
   .logo-footer{
     font-size: 20px;
-    padding-left: 10px;
     line-height:130px;
     font-weight: 700;
   }
   .footer-icon{
-    width: 100%;
+    width: 80%;
   }
 
   .content-form{
