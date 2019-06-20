@@ -14,12 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="Portfolio Leandro Fuenzalida, Visual Designer UI">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON -->
   <title>NON-CREATIVE</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="script" href="js/functions.js">
@@ -38,14 +40,23 @@
         <li><a href="#contact">CONTACT</a></li>
       </ul> 
     </header>
+    <div>
+      <h2 class="logo-desktop-white-rotate"><span class="non-white">NON</span>CREATIVE</h2>
+    </div>
     <div class="content-1">
-      <div id="content-left">
+      <div id="content-left" class="rellax" data-rellax-speed="-5" data-rellax-zindex="-12">
         <h1 class="bigtitle">Hello<br>World!</h1>
       </div>
-      <div id="content-right">
+      <div id="content-right" class="rellax" data-rellax-speed="8">
         <p class="description">I’m Leandro a UI/Visual Designer currently based in Santiago de Chile, here you will find my latest works.
         </p>
       </div>
+      <div id="arrow" class="rellax" data-rellax-speed="-5">
+        <img src="/img/arrow.svg" alt="">
+      </div>
+    </div>
+    <div id="background2" class="rellax" data-rellax-speed="100" >
+      <img src="/img/background-noncreative-2.svg" alt="">
     </div>
     <div id="portfolio" class="grid">
         <div class="box5">  
@@ -213,8 +224,14 @@
       </div>
     </footer>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
   <script src="/js/functions.js"></script>
+  <script src="/node_modules/rellax/rellax.js"></script>
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+</script>
+
 </body>
 </html>
