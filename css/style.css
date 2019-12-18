@@ -193,6 +193,13 @@ footer{
   color:#424242;
 }
 
+.single-footer{
+   position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
 .footer-left-box{
   width: 30%;
   float: left;
@@ -237,7 +244,7 @@ footer{
   font-weight: 600;
   font-family: 'Roboto Condensed', sans-serif;
   color:white;
-  font-size: 30px;
+  font-size: 22px;
   transform: rotate(90deg)!important;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -245,7 +252,7 @@ footer{
   -ms-transform: rotate(90deg);
   position: fixed;
   top:50%;
-  left:-3%;
+  left:-6%;
 }
 
 .menu-right{
