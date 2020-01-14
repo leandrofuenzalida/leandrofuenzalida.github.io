@@ -76,8 +76,8 @@ span{
 
 .content-form{
   height: 200px;
-  background-color: #424242;
-  color: white;
+  background-color:#fff;
+  color:#424242;
   padding: 0px 220px;
 }
 
@@ -92,7 +92,7 @@ span{
   font-size: 40px;
   font-weight: 700;
   padding-bottom:20px;
-  color: white;
+  color: #424242;
   margin:0;
 }
 
@@ -761,10 +761,10 @@ a:hover{
   }
   
   .content-form {
-    height: 600px;
-    background-color: #424242;
-    color: white;
-    padding: 0px 10px;
+    height: 240px;
+    background-color:#fff;
+    color:#424242;
+    padding: 50px 48px;
   }
   .message-left-form{
     font-size: 30px;
