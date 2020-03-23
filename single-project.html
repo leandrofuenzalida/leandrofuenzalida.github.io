@@ -1,47 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142275949-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142275949-1', {'optimize_id': 'GTM-5KKXMKC'});
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="Portfolio Leandro Fuenzalida, Visual Designer UI">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON -->
   <title>NON-CREATIVE</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.css">
   <link rel="script" href="js/functions.js">
   <link rel="stylesheet" href="/Magnific-Popup-master/dist/magnific-popup.css">
 </head>
 <body>
-  <div class="container-main">
-    <header>
+  <div class="container-main">  
+    <div id="mySidenav" class="sidenav">
+      <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="single-project.html">- proyectos</a>
+      <a href="#">- nosotros</a>
+      <a href="#contact">- contacto</a>
+    </div>
+    <header id="nav-scroll" data-nav-status="toggle">
       <a class="linklogo" href="/index.html">
         <h1 class="logo-desktop">
           <span class="non">NON</span>CREATIVE
         </h1>
       </a>
-      <ul>
-        <li><a href="/index.html#portfolio">PORTFOLIO</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul> 
+      <div class="box-menu">
+          <img id="menu-hamburguer-mobile" class="menu-hamburger" onclick="openNav()" src="/img/menusandwich.svg" height="16px" alt="">
+      </div>
     </header>
     <div class="content">
       <div class="single-right-box">
-        <a class="box-artwork" href="/img/ADGlobal-BOTY19-FeatureImage.jpg">
+        <a class="box-artwork-single" href="/img/ADMX-BarraganConcurso.jpg">
           <picture>
-              <source srcset="/img/ADGlobal-BOTY19-FeatureImage.jpg">
-              <img class="box-artwork" src="/img/ADGlobal-BOTY19-FeatureImage.jpg" alt="Casa Gilardi Illustration ©Leandro Fuenzalida">
+              <source srcset="/img/ADMX-BarraganConcurso.jpg">
+              <img class="box-artwork-single" src="/img/ADMX-BarraganConcurso.jpg" alt="ArchDaily en Monterrey ©Leandro Fuenzalida">
           </picture>
         </a>
       </div>
-      <div class="single-left-box">
-        <h1>Interior Casa Barragán</h1>
-        <p>Texto descriptivo para hablar del encargo en particular, motivo del encargo y por qué la representación de ese elemento como tal.</p>
+      <div class="single-box">
+        <a class="breadcumbs" href="">« Proyectos</a>
+        <h1 class="title-mobile">Obra del Año, ArchDaily México 2019</h1>
+        <h2 class="brand-mobile">Encargado por el equipo Editorial ArchDaily MX, 2019</h2>
+        <p class="paragraph-mobile">Todos los años se celebra el concurso Obra del Año en ArchDaily el cual tiene<br><br>
+          La idea era llamar a los usuarios de ArchDaily México a participar de un concurso de fotografía
+          retratando sus obras.  
+        </p>
       </div>
+      <div id="portfolio" class="grid-single">
+        <div class="box5">  
+          <a class="box-artwork" href="/img/CONTRATODOSMISMIEDOS_ARG.jpg">
+            <picture>
+                <source srcset="/img/CONTRATODOSMISMIEDOS_ARG.jpg">
+                <img class="box-artwork" src="/img/CONTRATODOSMISMIEDOS_ARG.jpg" alt="Casa Gilardi Illustration ©Leandro Fuenzalida">
+            </picture>
+          </a>
+        </div>
+        <div class="box6">
+          <a class="box-artwork" href="/img/FeatureImage_04.gif">
+            <picture>
+                <source srcset="/img/FeatureImage_04.gif">
+                <img class="box-artwork" src="/FeatureImage_04.gif" alt="Feature Image for Video Interviews for ArchDaily.com ©Leandro Fuenzalida">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <div class="single-box">
+            <p class="paragraph-mobile">Esta campaña fué promocionada en el sitio ArchDaily México mediante una campaña de banners y newsletter a usuarios.
+          </p>
+      </div>
+
     </div>
     
     <footer class="single-footer">
@@ -57,8 +102,13 @@
       </div>
     </footer>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
   <script src="/js/functions.js"></script>
+  <script src="/js/rellax.js"></script>
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+  </script>
 </body>
 </html>
