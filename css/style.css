@@ -8,7 +8,7 @@ body{
   padding: 0px;
   margin: 0px;
   color: #424242;
-  width: 100;
+  width: 100%;
 }
 
 header{
@@ -626,6 +626,10 @@ a:hover{
     display: none;
   }
 
+  .margin-top80{
+    margin-top: 80px;
+  }
+
   #arrow{
     display: none
   }
@@ -651,11 +655,11 @@ a:hover{
     color: #82FFB7;
     font-size: 16px;
     font-weight: 500;
-    display: block;
+    display: inline-block;
     padding: 16px 0px;
   }
   .paragraph-mobile{
-    padding: 16px 5% 40px 20%;
+    padding: 0px 5% 40px 20%;
     font-size: 18px;
     }
 
@@ -669,12 +673,6 @@ a:hover{
     font-weight: 400;
     display: inline;
     color: #9e9e9e;
-  }
-
-  .single-footer{
-    left: 0;
-    bottom: 0;
-    text-align: center;
   }
 
   #menu-hamburguer-mobile{
@@ -781,7 +779,9 @@ a:hover{
   }
 
   .single-box{
-    padding: 80px 3% 0px 3%;
+    margin: 16px 5% 0px 5%;
+    width:90%;
+
   }
   .single-right-box{
     padding: 24px 3%;
@@ -867,6 +867,75 @@ a:hover{
   #arrow{
     display: none
   }
+
+  footer{
+    width: 90%;
+    padding: 5px 5%;
+    height: 130px;
+    background-color: #82FFB7;
+    color:#424242;
+  }
+
+  /* SINGLE PROJECT */
+  .content{
+    padding-top:80px
+  }
+
+  .box-artwork-single {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .breadcumbs{
+    color: #82FFB7;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 16px 0px;
+  }
+  .paragraph-mobile{
+    padding: 0px 8% 40px 20%;
+    font-size: 22px;
+    }
+
+    .margin-top80{
+      margin-top: 160px;
+    }
+
+  .title-mobile{
+    font-weight: 800;
+    font-size: 40px;
+  }
+
+  .brand-mobile {
+    font-size: 16px;
+    font-weight: 400;
+    display: inline;
+    color: #9e9e9e;
+  }
+
+  #menu-hamburguer-mobile{
+    height: 16px !important;
+    display: block;
+  }
+
+  .grid-single {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(150px, auto);
+    grid-row-gap:20px;
+    max-width: 100%;
+    background-color: white
+  }
+
+  .grid-single > div {
+
+  }
+
+  /* SINGLE PROJECT */
 
   /* SIDEBAR */
 
