@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.box-artwork').magnificPopup({
+  $('.box-artwork-popup').magnificPopup({
   type: 'image',
   mainClass: 'mfp-with-zoom', // this class is for CSS animation below
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
 });
 
-$("img").click(function(){
+$(".box-artwork").click(function(){
   var zoom = parseInt($(this).css("zoom"));
   if(zoom==180){
       $(this).css("zoom","100%");
@@ -37,6 +37,10 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+var hamburguerMenu = document.querySelector('.box-menu')
+
+hamburguerMenu.addEventListener('click', openNav)
 
 // Hide Header on on scroll down
 var didScroll;
