@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  $('.box-artwork-popup').magnificPopup({
+  $('.magnific-popup').magnificPopup({
   type: 'image',
   mainClass: 'mfp-with-zoom', // this class is for CSS animation below
 
   zoom: {
     enabled: true, // By default it's false, so don't forget to enable it
 
-    duration: 300, // duration of the effect, in milliseconds
+    duration: 10, // duration of the effect, in milliseconds
     easing: 'ease-in-out', // CSS transition easing function
 
     // The "opener" function should return the element from which popup will be zoomed in
@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
 });
 
-$(".box-artwork").click(function(){
+$(".magnific-popup").click(function(){
   var zoom = parseInt($(this).css("zoom"));
   if(zoom==180){
       $(this).css("zoom","100%");
@@ -45,7 +45,7 @@ hamburguerMenu.addEventListener('click', openNav)
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
-var delta = 5;
+var delta = 460;
 var navbarHeight = $('header').outerHeight();
 
 $(window).scroll(function(event){
@@ -71,14 +71,15 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('header').removeClass('nav-down').addClass('nav-up');
+        $('.logo-desktop-white-rotate').removeClass('text-blur-out');
+        $('.logo-desktop-white-rotate').removeClass('remove-lateral-brand');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('header').removeClass('nav-up').addClass('nav-down');
+            $('.logo-desktop-white-rotate').addClass('text-blur-out');
         }
     }
     
     lastScrollTop = st;
 }
-
-
