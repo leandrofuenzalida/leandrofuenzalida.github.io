@@ -351,6 +351,10 @@ a:hover{
   height: 80px;
 }
 
+.vertical-image{
+  max-height: 800px;
+}
+
 .item-flex{
   text-align: center;
   flex-grow: 2;
@@ -856,7 +860,6 @@ a:hover{
   h3{
     font-size: 40px !important;
   }
-  
   
   
   .content-1{
