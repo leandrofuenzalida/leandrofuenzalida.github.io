@@ -1157,7 +1157,8 @@ a:hover{
     grid-column-gap:10px;
     max-width: 80%;
     padding: 10px 100px 0px 100px;
-    background-color: white
+    background-color: white;
+    margin:auto
   }
 
   .grid > div {
