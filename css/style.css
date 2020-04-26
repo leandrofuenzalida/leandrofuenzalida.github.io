@@ -319,6 +319,7 @@ a:hover{
   max-width: 100%;
   padding: 0px 100px 0px 100px;
   background-color: white;
+  margin: auto;
 }
 
 .grid > div {
