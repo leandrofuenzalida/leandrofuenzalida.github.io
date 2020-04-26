@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  $('.box-artwork').magnificPopup({
+  $('.magnific-popup').magnificPopup({
   type: 'image',
   mainClass: 'mfp-with-zoom', // this class is for CSS animation below
 
   zoom: {
     enabled: true, // By default it's false, so don't forget to enable it
 
-    duration: 300, // duration of the effect, in milliseconds
+    duration: 10, // duration of the effect, in milliseconds
     easing: 'ease-in-out', // CSS transition easing function
 
     // The "opener" function should return the element from which popup will be zoomed in
@@ -21,7 +21,7 @@ $(document).ready(function() {
   });
 });
 
-$("img").click(function(){
+$(".magnific-popup").click(function(){
   var zoom = parseInt($(this).css("zoom"));
   if(zoom==180){
       $(this).css("zoom","100%");
@@ -38,3 +38,48 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
+var hamburguerMenu = document.querySelector('.box-menu')
+
+hamburguerMenu.addEventListener('click', openNav)
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 20;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+        $('.logo-desktop-white-rotate').removeClass('text-blur-out');
+        $('.logo-desktop-white-rotate').removeClass('remove-lateral-brand');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+            $('.logo-desktop-white-rotate').addClass('text-blur-out');
+        }
+    }
+    
+    lastScrollTop = st;
+}
