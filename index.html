@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142275949-1"></script>
@@ -24,21 +24,29 @@
   <!-- FAVICON -->
   <title>NON-CREATIVE</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.css">
   <link rel="script" href="js/functions.js">
   <link rel="stylesheet" href="/Magnific-Popup-master/dist/magnific-popup.css">
 </head>
 <body>
   <div class="container-main">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">- proyectos</a>
+      <a href="#">- nosotros</a>
+      <a href="#contact">- contacto</a>
+    </div>
     <header>
       <a class="linklogo" href="#">
         <h1 class="logo-desktop">
           <span class="non">NON</span>CREATIVE
         </h1>
+        <span class="menu-hamburger" onclick="openNav()">&#9776;</span>
       </a>
-      <ul>
+      <!-- <ul>
         <li><a href="#portfolio">PORTFOLIO</a></li>
         <li><a href="#contact">CONTACT</a></li>
-      </ul> 
+      </ul>  -->
     </header>
     <div>
       <h2 class="logo-desktop-white-rotate"><span class="non-white">NON</span>CREATIVE </h2>
