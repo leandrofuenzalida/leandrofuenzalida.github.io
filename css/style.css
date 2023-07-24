@@ -102,9 +102,10 @@ span{
 .hero-box{
   width: 84%;
   display: flex;
-  height: 90vh;
+  height: 100vh;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
   /* margin-top: 132px;
   margin-bottom: 120px; */
@@ -115,7 +116,7 @@ span{
   display:flex;
   flex-direction:column;
   justify-content: center;
-  width: 60%;
+  width: 55%;
 }
 
 .hero-message{
@@ -129,6 +130,12 @@ span{
   justify-content: center;
   align-items: flex-end;
   width: 40%;
+}
+
+.image-hero{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .button-primary {
@@ -228,10 +235,11 @@ span{
 }
 
 .contact-mail{
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   padding-bottom:20px;
-  color: #424242;
+  text-transform:uppercase;
+  color: #707070;
   margin:0;
 }
 
@@ -1425,10 +1433,6 @@ a:hover{
     float: right;
     border-radius: 5px;
     border: none;
-  }
-
-  .contact-mail{
-    font-size: 30px;
   }
 
   #content-left-form{
