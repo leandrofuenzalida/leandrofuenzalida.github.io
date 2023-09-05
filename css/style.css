@@ -99,18 +99,29 @@ span{
   margin: 0;
 }
 
+/* 
 .hero-box{
   width: 84%;
   display: flex;
-  height: 100vh;
+  height: 65vh;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  /* margin-top: 132px;
-  margin-bottom: 120px; */
   position: relative;
+} */
+
+.hero-box{
+  width: 84%;
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  margin-top: 142px !important;
+  margin: auto;
 }
+
 
 .left-item{
   display:flex;
@@ -716,16 +727,19 @@ a:hover{
     width: 90%;
     display: flex;
     flex-direction:column;
+    justify-content: center; /* Center content horizontally */
     align-items: center;
     margin: auto;
     text-align: center;
     margin-top: 176px;
     margin-bottom: 120px;
     position: relative;
+    height: 38vh;
   }
   
   .left-item{
     width: 100%;
+    align-items: center;
   }
   
   .hero-message{
@@ -1046,16 +1060,19 @@ a:hover{
     width: 70%;
     display: flex;
     flex-direction:column;
+    justify-content: center;
     align-items: center;
     margin: auto;
     text-align: center;
     margin-top: 176px;
     margin-bottom: 120px;
     position: relative;
+    height: 40vh;
   }
   
   .left-item{
     width: 100%;
+    align-items: center;
   }
   
   .hero-message{
