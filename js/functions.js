@@ -83,3 +83,13 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtén el elemento con la clase "fade-in-element"
+  var element = document.querySelector(".fade-in-element");
+  
+  // Agrega la clase "show" después de un retraso de 1000 milisegundos (1 segundo)
+  setTimeout(function() {
+    element.classList.add("show");
+  }, 200);
+});
