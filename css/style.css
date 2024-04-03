@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 
 body{
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   padding: 0px;
   margin: 0px;
   color: #424242;
@@ -78,7 +79,7 @@ header{
 h1, h3, h2{
   padding: 0px;
   margin:0;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 h1{
@@ -118,7 +119,7 @@ span{
   flex-direction: row;
   justify-content: center; /* Center content horizontally */
   align-items: center;
-  margin-top: 142px !important;
+  margin: 142px auto !important;
   margin: auto;
 }
 
@@ -153,7 +154,6 @@ span{
 	background-color:#ffffff;
   text-indent:0;
 	border:2px solid #82ffb6;
-	display:block;
 	color:#424242;
 	font-family:'Roboto Condensed';
 	font-size:18px;
@@ -227,7 +227,7 @@ span{
 .content-form{
   background-color:#1c1c1c;
   color:#424242;
-  height: 85vh;
+  height: 82vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -737,7 +737,7 @@ a:hover{
   .hero-box{
     width: 90%;
     display: flex;
-    flex-direction:column;
+    flex-direction:column-reverse;
     justify-content: center; /* Center content horizontally */
     align-items: center;
     margin: auto;
@@ -745,12 +745,18 @@ a:hover{
     margin-top: 176px;
     margin-bottom: 120px;
     position: relative;
-    height: 38vh;
+    height: 65vh;
+  }
+
+  .hero-image{
+    width: 70%;
+    height: auto;
   }
   
   .left-item{
     width: 100%;
     align-items: center;
+    margin-top:40px;
   }
   
   .hero-message{
@@ -760,6 +766,7 @@ a:hover{
   }
   
   .right-item{
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -1070,7 +1077,7 @@ a:hover{
   .hero-box{
     width: 70%;
     display: flex;
-    flex-direction:column;
+    flex-direction:column-reverse;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -1078,12 +1085,13 @@ a:hover{
     margin-top: 176px;
     margin-bottom: 120px;
     position: relative;
-    height: 40vh;
+    height: 68vh;
   }
   
   .left-item{
     width: 100%;
     align-items: center;
+    margin-top:40px;
   }
   
   .hero-message{
@@ -1091,6 +1099,15 @@ a:hover{
     font-weight: 500;
     font-size: 48px;
     padding-bottom: 16px;
+  }
+
+  .right-item{
+    width: 100%;
+  }
+
+  .hero-image{
+    width: 60%;
+    height: auto;
   }
 
   .button-primary{
@@ -1738,6 +1755,7 @@ a:hover{
   .paragraph-mobile{
     padding: 0px 20% 60px 20%;
     font-size: 28px;
+    line-height: 150%;
   }
 
   .title-mobile{
