@@ -499,7 +499,7 @@ a:hover{
   max-height: 100%;
 }
 
-.item-flex{
+g{
   text-align: center;
   flex-grow: 2;
 }
@@ -733,7 +733,7 @@ a:hover{
   }
   
   h3{
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
 
   .hero-box{
@@ -942,13 +942,13 @@ a:hover{
     margin:auto;
   }
   .paragraph-mobile{
-    padding: 24px 5% 16px 20%;
+    padding: 24px 5% 16px 8%;
     font-size: 18px;
   }
 
   .title-mobile{
     font-weight: 800;
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .brand-mobile {
@@ -1234,7 +1234,7 @@ a:hover{
   }
 
   .paragraph-mobile{
-    padding: 40px 8% 40px 20%;
+    padding: 40px 8% 40px 8%;
     font-size: 22px;
     }
 
