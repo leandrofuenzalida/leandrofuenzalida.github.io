@@ -478,6 +478,8 @@ a:hover{
   height: 100%;
   object-fit: cover;
   display: block;
+  overflow: hidden;
+  position: relative;
 }
 .box-artwork-img{
   width: 100%;
@@ -485,6 +487,59 @@ a:hover{
   display: block;
 }
 
+/* CAPTION ON HOVER --- START */
+
+.caption-link {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: none;
+  height: auto;
+  padding: 32px;
+}
+
+.title-caption{
+  font-size:48px;
+  font-weight:600;
+}
+
+.description-caption{
+  font-size:24px;
+  line-height:140%;
+}
+
+.box-artwork img {
+  display: relative;
+  z-index: 2;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.box-artwork:hover img {
+  transform: translateY(110%);
+  overflow: hidden;
+}
+
+.box-artwork:hover .caption-link {
+  position: absolute;
+  color:#1c1c1c;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0px);
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  background: #D6FFE7;
+}
+
+.pos-abs-0{
+  position: absolute;
+  bottom: 32px;
+  left:32px;
+  cursor:pointer;
+}
+
+
+/* CAPTION ON HOVER --- END */
 .control-projects{
   display: flex;
   flex-direction: row;
@@ -1403,19 +1458,18 @@ g{
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(200px, auto);
-    grid-column-gap:10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, 600px);
+    grid-column-gap:20px;
     max-width: 84%;
     padding: 10px 100px 0px 100px;
-    background-color: white;
     margin:auto
   }
 
   .grid > div {
     padding:1em;
-    background-color: #F0F0F0
+    background-color:rgb(219,255,234);
   }
 
   .box1{
@@ -1444,22 +1498,22 @@ g{
 
   .box5{
     grid-column: 1 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 2;
   }
 
   .box6 {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
+    grid-column: 3/5;
+    grid-row: 1/2;
   }
 
   .box7 {
-    grid-column: 3/3;
-    grid-row: 3/6;
+    grid-column: 1/3;
+    grid-row: 2/3;
   }
 
   .box8{
-    grid-column: 1 / 3;
-    grid-row: 4 / 6 ;
+    grid-column: 3/5;
+    grid-row: 2/3 ;
   }
 
   .description{
