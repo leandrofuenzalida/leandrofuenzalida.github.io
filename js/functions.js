@@ -38,7 +38,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-var hamburguerMenu = document.querySelector('.box-menu')
+var hamburguerMenu = document.querySelector('.menu-hamburger')
 
 hamburguerMenu.addEventListener('click', openNav)
 
