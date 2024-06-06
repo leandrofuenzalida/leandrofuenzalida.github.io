@@ -67,6 +67,7 @@ header{
   top:0;
   z-index:9;
   transition: top 0.2s ease-in-out;
+  backdrop-filter: blur(2px);
 }
 
 .flex-hor{
@@ -80,7 +81,6 @@ header{
 .box-menu{
   display: inline-block;
   float: right;
-  padding: 0px 36px 0px 0px;
 }
 
 
@@ -412,7 +412,7 @@ footer{
   color: #424242;
   float: left;
   font-size: 26px;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 
@@ -860,12 +860,12 @@ g{
     display:block;
     position:fixed;
     line-height: 88px;
-  } 
+    background-color: white;
+  }
 
   .box-menu{
     display: inline-block;
     float: right;
-    padding:0px 36px 0px 0px;
   }
 
   .description-desktop-white-rotate{
@@ -931,6 +931,7 @@ g{
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 24px 0px 24px;
   }
   
   footer{
@@ -1064,6 +1065,7 @@ g{
   }
   .logo-desktop-white-rotate{
     display: none;
+    padding-left:10px;
   }
 
   .margin-top80{
@@ -1092,8 +1094,9 @@ g{
     margin:auto;
   }
   .paragraph-mobile{
-    padding: 24px 5% 16px 8%;
+    padding: 24px 0% 16px 0%;
     font-size: 18px;
+    line-height: 160%;
   }
 
   .title-mobile{
@@ -1204,13 +1207,13 @@ g{
   .box-menu{
     display: inline-block;
     float: right;
-    padding:36px 36px 0px 0px;
   }
 
   .menu-hamburger {
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 32px 0px 40px;
   }
 
   h1{
@@ -1503,13 +1506,13 @@ g{
   .box-menu{
     display: inline-block;
     float: right;
-    padding:36px 36px 0px 0px;
   }
 
   .menu-hamburger {
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 32px 0px 40px;
   }
 
   #content-right{
@@ -1521,6 +1524,7 @@ g{
   .single-box{
     margin: auto;
     width:70%;
+    max-width: 1000px;
   }
 
   .single-right-box{
@@ -1664,7 +1668,7 @@ g{
   }
 
   .paragraph-mobile{
-    padding: 20px 20% 40px 20%;
+    padding: 20px 10% 40px 10%;
     font-size: 24px;
     line-height: 160%;
   }
@@ -1785,7 +1789,6 @@ g{
   .box-menu{
     display: inline-block;
     float: right;
-    padding:0px 36px 0px 0px;
   }
 
   .hero-image{
@@ -1796,7 +1799,7 @@ g{
     cursor:pointer;
     display: block;
     color: inherit;
-    margin-left:40px;
+    margin:0px 32px 0px 40px;
   }
 
   .description {
@@ -1909,9 +1912,9 @@ g{
   }
 
   .paragraph-mobile{
-    padding: 0px 20% 60px 20%;
-    font-size: 28px;
-    line-height: 160%;
+    padding: 0px 10% 60px 10%;
+    font-size: 24px;
+    line-height: 175%;
   }
 
   .title-mobile{
