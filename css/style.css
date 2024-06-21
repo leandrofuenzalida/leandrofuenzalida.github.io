@@ -109,7 +109,7 @@ span{
 }
 
 .lang:active{
-  font-weight: 500;
+  color: #1a1a1a;
 }
 
 a {
@@ -694,8 +694,6 @@ g{
 }
 
 .underline{
-  text-decoration: underline !important;
-  text-decoration-color:#82FFB7 !important;
   font-weight: 700;
 }
 
