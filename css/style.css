@@ -620,10 +620,6 @@ a:hover{
   cursor:pointer;
 }
 
-.yellow-bg{
-
-}
-
 
 /* CAPTION ON HOVER --- END */
 .item-flex a{
@@ -693,8 +689,9 @@ g{
   font-size: 18px;
 }
 
-.underline{
+.underline {
   font-weight: 700;
+  text-decoration: underline;
 }
 
 .sidenav a:hover {
@@ -725,7 +722,8 @@ g{
 }
 
 .sidenav .item-menu{
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 .nav-up {

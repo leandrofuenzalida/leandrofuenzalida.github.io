@@ -31,7 +31,7 @@ $(".magnific-popup").click(function(){
 });
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "300px";
 }
 
 function closeNav() {
