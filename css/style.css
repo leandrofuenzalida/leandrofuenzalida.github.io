@@ -239,8 +239,8 @@ a {
 
 .content-form{
   background-color:#1c1c1c;
-  color:#424242;
-  height: 82vh;
+  color:#929292;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1002,12 +1002,12 @@ g{
     padding-top:80px;
   }
 
-
   header ul{
     display: none
   }
 
   .content-form {
+    height: 70vh;
   }
   .message-left-form{
     font-size: 25px;
