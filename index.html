@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <script src="/js/redirect.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142275949-1"></script>
   <script>
@@ -23,16 +24,10 @@
   <meta name="theme-color" content="#ffffff">
   <!-- FAVICON -->
   <title>NON-CREATIVE</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.css">
   <link rel="script" href="js/functions.js">
   <link rel="stylesheet" href="/Magnific-Popup-master/dist/magnific-popup.css">
-  <!-- OPENGRAPH -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="NONCREATIVE">
-  <meta property="og:url" content="https://www.noncreative.cl">
-  <meta property="og:image" content="https://noncreative.cl/img/OpenGraph.jpg">
-  <meta property="og:description" content="UX/UI Leandro Fuenzalida Portfolio">
   <!-- Hotjar Tracking Code for noncreative.cl -->
   <script>
     (function(h,o,t,j,a,r){
@@ -49,16 +44,12 @@
   <div class="container-main">  
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="/index.html" class="categoria"><b>Home</b></a>
-      <p class="categoria"><b>Casos</b></p>
-      <a class="item-menu" href="/sairys.html">Sairys</a>
-      <a class="item-menu" href="/kuamo.html">Kuamo</a>
-      <a class="item-menu" href="/mestiza-joyeria.html">Mestiza Joyería</a>
-      <a class="item-menu" href="/archdaily.html">ArchDaily</a>
-      <a class="item-menu" href="/valle-negro-cerveceria.html">Valle Negro</a>
-      <a class="item-menu" href="/apptec.html">Apptec</a>
-      <a class="item-menu" href="/los-mellizos.html">Los Mellizos</a>
-      <a class="item-menu" href="/estudio-racimo.html">Estudio Racimo</a>
+			<a href="/index.html" class="categoria underline"><b>Home</b></a>
+      <p class="categoria"><b>Cases</b></p>
+      <a class="item-menu" href="/eng/sairys.html">Sairys</a>
+      <a class="item-menu" href="/eng/archdaily.html">ArchDaily</a>
+      <a class="item-menu" href="/eng/backtrack-academy.html">Backtrack Academy</a>
+      <a class="item-menu" href="/eng/servicerocket.html">ServiceRocket</a>
       <a href="/index.html#contact" class="categoria"><b>Contacto</b></a>
       <a href="/about.html" class="categoria"><b>About Me</b></a>
     </div>
@@ -69,103 +60,105 @@
         </div>
       </a>
       <div class="box-menu">
+        <div class="flex-hor">
+          <div>
+            <a class="lang" href="/eng/index.html">en</a> | 
+            <a class="lang underline" href="/index.html">es</a>
+          </div>
           <img class="menu-hamburger" src="/img/menusandwich.svg" alt="">
+        </div>
       </div>
     </header>
       <div class="logo-desktop-white-rotate remove-lateral-brand text-focus-in">
         <span class="non-white">NON</span>CREATIVE 
       </div>
-    <div class="hero-box">
-      <div class="left-item">
-        <h1 class="hero-message">
-          Hola! <BR>Soy Leandro.
-        </h1>
-        <h2>
-          Diseñador UX/UI + no-code developer.<br>
-          Bienvenido a mi portafolio.
-        </h2>
-        <a href="#contact">
-          <button class="button-primary m-t-40">HABLEMOS! »</button>
-        </a>
-      </div>
-      <div class="right-item">
-        <img class="hero-image"src="/img/Leandro-Fuenzalida.png" alt="Leandro Fuenzalida Delgado">
-      </div>
+      <div class="hero-box">
+        <div class="left-item">
+          <h1 class="hero-message">
+            HOLA
+          </h1>
+          <h2>
+            Soy Leandro, UX & Webflow Designer.<br>
+            Bienvenido a mi portafolio.
+          </h2>
+          <!-- <a href="#portfolio">
+            <button class="button-primary m-t-40">ver más</button>
+          </a> -->
+        </div>
+        <div class="right-item">
+          <img class="hero-image" src="/img/Hero-Illustrations.png" alt="Leandro Fuenzalida Delgado">
+        </div>
     </div>
+    </div>
+    <div class="widget-post">
+      <div class="feature-image">
+        <img src="" alt="">
+      </div>
+      
     </div>
     <div id="portfolio" class="grid">
       <div class="box5">
         <a class="box-artwork" href="/sairys.html">
+          <div class="caption-link">
+            <h1 class="title-caption">Sayris: una Web App de gestión de candidatos</h1>
+            <p class="description-caption">Smartjob construyó su propio sistema de seguimiento de candidatos (ATS). Como Diseñador de Producto, optimicé su Web App para haer mas eficientes sus procesos. Explora cómo trabajamos y las mejoras que implementamos.</p>
+            <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+          </div>
           <picture>
-              <img class="box-artwork" src="/img/sairys-hero.png" alt="Illustration for Get on Board, here we see two developers working on a project ©Leandro Fuenzalida">
+            <img class="box-artwork" src="/img/sairys-hero.png" alt="Illustration for Get on Board, here we see two developers working on a project ©Leandro Fuenzalida">
           </picture>
         </a>
       </div>
-      <div class="box6">
-        <a class="box-artwork" href="/kuamo.html">
+      <div class="box6">    
+        <a class="box-artwork" href="/archdaily.html">
+          <div class="caption-link">
+            <h1 class="title-caption">Hype Designer: Potenciando la Identidad de Marca en ArchDaily</h1>
+            <p class="description-caption">Con el cargo de "Hype Designer", fuí responsable de gestionar y ejecutar en 360° la identidad visual, incluídas instancias de Mailing, gestión de anuncios e iniciativas de Diseño UX.</p>
+            <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+          </div>
           <picture>
-              <source srcset="/img/Kuamo-Diseno-de-marca.jpg">
-              <img class="box-artwork" src="/img/Kuamo-Diseno-de-marca.jpg" alt="Feature Image for Video Interviews for ArchDaily.com ©Leandro Fuenzalida">
+              <source srcset="/img/IsometricBookCity_4.jpg">
+              <img class="box-artwork" src="/img/IsometricBookCity_4.jpg" alt="Casa Gilardi Illustration ©Leandro Fuenzalida">
           </picture>
         </a>
       </div>
       <div class="box7">
-        <a class="box-artwork" href="/apptec.html">
+        <a class="box-artwork" href="/backtrack-academy.html">
+          <div class="caption-link">
+            <h1 class="title-caption">Product Designer en Backtrack Academy</h1>
+            <p class="description-caption">Backtrack Academy, una startup chilena de educación en Hacking Ético con más de 50 mil usuarios, me contrataron como Diseñador de Productos para optimizar la experiencia de usuario y aumentar la participación en su plataforma.</p>
+            <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+          </div>
           <picture>
-              <source srcset="/img/Apptec-Diseno-de-Interfaces.jpg">
-              <img class="box-artwork" src="/img/Apptec-Diseno-de-Interfaces.jpg" alt="Caso Apptec Ltda ©Leandro Fuenzalida">
+              <source srcset="/img/ Backtrack-Academy.jpg">
+              <img class="box-artwork" src="/img/Backtrack-Academy.jpg" alt="Caso Apptec Ltda ©Leandro Fuenzalida">
           </picture>
         </a>
       </div>
       <div class="box8">
-        <a class="box-artwork" href="/mestiza-joyeria.html">
+        <a class="box-artwork" href="/servicerocket.html">
+          <div class="caption-link">
+            <h1 class="title-caption">UXD & Webflow Dev en ServiceRocket</h1>
+            <p class="description-caption">Usando Miro, Figma y Webflow, colaboré estrechamente con gerentes de marketing de productos, product owners, redactores de contenido, diseñadores y especialistas en marketing para presentar servicios y productos de ServiceRocket en experiencias web excepcionales.</p>
+            <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+          </div>
           <picture>
-              <source srcset="/img/mestizaJoyeria.jpg">
-              <img class="box-artwork" src="/img/mestizaJoyeria.jpg" alt="Diseño de Logo Mestiza Joyería ©Leandro Fuenzalida">
+              <source srcset="/img/ServiceRocket-OpenGraph.jpg">
+              <img class="box-artwork" src="/img/ServiceRocket-OpenGraph.jpg" alt="Open Graph de ServiceRocket">
           </picture>
         </a>
       </div>
     </div>
-    <div class="grid">
-        <div class="box1">
-          <a class="box-artwork" href="/los-mellizos.html ">
-            <picture>
-                <source srcset="/img/losmellizos-diseno-de-marca_02.jpg">
-                <img class="box-artwork" src="/img/losmellizos-diseno-de-marca_02.jpg" alt="Imagen de marca Los Mellizos con un bar en el fondo ©Leandro Fuenzalida">
-            </picture>
-          </a>
-        </div>
-        <div class="box2">    
-          <a class="box-artwork" href="/archdaily.html">
-            <picture>
-                <source srcset="/img/IsometricBookCity_4.jpg">
-                <img class="box-artwork" src="/img/IsometricBookCity_4.jpg" alt="Casa Gilardi Illustration ©Leandro Fuenzalida">
-            </picture>
-          </a>
-        </div>
-        <div class="box3">
-          <a class="box-artwork" href="/valle-negro-cerveceria.html">
-            <picture>
-                <source srcset="/img/valle-negro-cerveceria.jpg">
-                <img class="box-artwork vertical-image" src="/img/valle-negro-cerveceria.jpg" alt="Imagen de una Botella de Cerveza Artesanal Valle Negro ©Leandro Fuenzalida">
-            </picture>
-          </a>
-        </div>
-        <div class="box4">
-          <a class="box-artwork " href="/estudio-racimo.html">
-            <picture>
-                <source srcset="/img/Racimo-Portada.jpg">
-                <img class="box-artwork" src="/img/Racimo-Portada.jpg" alt="4 Isometric Building Illustrations ©Leandro Fuenzalida ">
-            </picture>
-          </a>
-        </div>
-    </div>
-  </div>
     </div>
     <div id="contact" class="content-form">
-      <a class="contact-mail" href="mailto:noncreativelab@gmail.com?Subject=MailFromNonCreative">
+      <h3 class="contact-mail">Hablemos!</h3>
+      <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/leandro-fuenzalida/30min" style="min-width:80%;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+      <!-- <a class="contact-mail" href="mailto:noncreativelab@gmail.com?Subject=MailFromNonCreative">
         noncreativelab@gmail.com
-      </a>
+      </a> -->
     </div>
     <div class="footer control-projects">
       <div class="item-flex">

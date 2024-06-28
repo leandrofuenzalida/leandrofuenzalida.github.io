@@ -31,14 +31,14 @@ $(".magnific-popup").click(function(){
 });
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "300px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-var hamburguerMenu = document.querySelector('.box-menu')
+var hamburguerMenu = document.querySelector('.menu-hamburger')
 
 hamburguerMenu.addEventListener('click', openNav)
 

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 
 body{
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;
   padding: 0px;
   margin: 0px;
   color: #424242;
@@ -67,12 +67,20 @@ header{
   top:0;
   z-index:9;
   transition: top 0.2s ease-in-out;
-} 
+  backdrop-filter: blur(2px);
+}
+
+.flex-hor{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: space-around;
+}
 
 .box-menu{
   display: inline-block;
   float: right;
-  padding: 0px 36px 0px 0px;
 }
 
 
@@ -100,17 +108,15 @@ span{
   margin: 0;
 }
 
-/* 
-.hero-box{
-  width: 84%;
-  display: flex;
-  height: 65vh;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  position: relative;
-} */
+.lang:active{
+  color: #1a1a1a;
+}
+
+a {
+  display: inline-block;
+  width: auto;
+}
+
 
 .hero-box{
   width: 84%;
@@ -119,21 +125,24 @@ span{
   flex-direction: row;
   justify-content: center; /* Center content horizontally */
   align-items: center;
-  margin: 142px auto !important;
+  margin: 80px auto !important;
   margin: auto;
 }
 
 
 .left-item{
-  display:flex;
+  /* display:flex; */
   flex-direction:column;
   justify-content: center;
   width: 55%;
 }
 
 .hero-message{
+  font-size:112px;
+  font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 112%;
-  font-weight: 500;
+  font-weight: 800;
+  font-style: oblique;
   padding-bottom: 16px;
 }
 
@@ -151,29 +160,33 @@ span{
 }
 
 .button-primary {
-	background-color:#ffffff;
+  display: inline-block;
+	background-color:#82ffb6;
   text-indent:0;
-	border:2px solid #82ffb6;
+	border:none;
 	color:#424242;
-	font-family:'Roboto Condensed';
+	font-family:"Plus Jakarta Sans", sans-serif;
 	font-size:18px;
-	font-weight:400;
-	font-style:normal;
+	font-weight:500;
+	font-style: oblique;
   height:48px;
-	line-height:46px;
+	line-height:42px;
   width:auto;
   padding: 0px 32px;
 	text-decoration:none;
   text-align:center;
+  cursor: pointer;
+  border-radius: 4px;
 }
   
   .button-primary:hover {
-  background-color:#82ffb6;  
+  background-color:#31ff87;  
 }
 
 .button-primary:active {
-	position:relative;
-	top:1px;
+	position:absolute;
+  bottom:32px;
+  left:32px;
 }
 
 .m-t-40{
@@ -229,6 +242,7 @@ span{
   color:#424242;
   height: 82vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -363,6 +377,7 @@ footer{
 }
 
 .logo-footer{
+  font-family:'Roboto Condensed', sans-serif;
   font-weight: 700;
   font-size: 24px;
 }
@@ -389,7 +404,7 @@ footer{
   color: #424242;
   float: left;
   font-size: 26px;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 
@@ -439,7 +454,7 @@ li{
   margin: 0;
   text-align: right;
   font-size: 15px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif, sans-serif;
 }
 
 
@@ -478,6 +493,8 @@ a:hover{
   height: 100%;
   object-fit: cover;
   display: block;
+  overflow: hidden;
+  position: relative;
 }
 .box-artwork-img{
   width: 100%;
@@ -485,11 +502,131 @@ a:hover{
   display: block;
 }
 
+.flex-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-bta{
+  background-color:#070916 ;
+  padding:8%;
+  border-radius: 16px;
+}
+
+.logo-bta {
+  display: block;
+  width: 50%;
+  }
+  
+  .icono {
+    -webkit-animation: blink-1 2s cubic-bezier(.55,.085,.68,.53) 10 infinite both;
+    animation: blink-1 2s cubic-bezier(.55,.085,.68,.53) infinite reverse both
+}
+
+@-webkit-keyframes blink-1 {
+    0%,50%,100% {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+@keyframes blink-1 {
+    0%,50%,100% {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+/* CAPTION ON HOVER --- START */
+
+.caption-link {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: none;
+  height: auto;
+  padding: 32px;
+}
+
+.title-caption{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size:46px;
+  font-weight:800;
+  text-transform: uppercase;
+  font-style: italic;
+  color:#424242;
+}
+
+.description-caption{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size:22px;
+  line-height:160%;
+  color:#424242;
+}
+
+.box-artwork img {
+  display: relative;
+  z-index: 2;
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-artwork:hover img {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.box-artwork:not(:hover) img {
+  visibility: visible;
+  opacity: 100;
+  transition: visibility 0s 0.01s, opacity 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.box-artwork:hover .caption-link {
+  position: absolute;
+  color:#1c1c1c;
+  transition: transform 0s 0.3s ease-in-out;
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  background: #ffffff;
+}
+
+.pos-abs-0{
+  position: absolute;
+  bottom:32px;
+  left:32px;
+  cursor:pointer;
+}
+
+
+/* CAPTION ON HOVER --- END */
+.item-flex a{
+  display: flex;
+  color:#505050;
+}
+
+.item-flex a:hover{
+  text-decoration: underline;
+  color: #31ff87;
+}
+
 .control-projects{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color:#1C1C1C;
   height: 80px;
@@ -525,13 +662,13 @@ g{
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
   font-size: 18px;
 }
 
 .sidenav a {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -542,9 +679,9 @@ g{
   font-size: 18px;
 }
 
-.underline{
-  text-decoration: underline !important;
-  text-decoration-color:#82FFB7 !important;
+.underline {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .sidenav a:hover {
@@ -559,7 +696,7 @@ g{
 }
 
 .sidenav .categoria{
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;;
   font-size: 22px;
   color: white;
   padding: 16px 0px 8px 24px ;
@@ -575,7 +712,8 @@ g{
 }
 
 .sidenav .item-menu{
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 .nav-up {
@@ -711,12 +849,12 @@ g{
     display:block;
     position:fixed;
     line-height: 88px;
-  } 
+    background-color: white;
+  }
 
   .box-menu{
     display: inline-block;
     float: right;
-    padding:36px 36px 0px 0px;
   }
 
   .description-desktop-white-rotate{
@@ -751,8 +889,8 @@ g{
   }
 
   .hero-image{
-    width: 70%;
-    height: auto;
+    width: 100%;
+    height: auto;;
   }
   
   .left-item{
@@ -762,8 +900,9 @@ g{
   }
   
   .hero-message{
-    line-height: 42px;
-    font-weight: 500;
+    font-size:80px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
     padding-bottom: 16px;
   }
   
@@ -781,6 +920,7 @@ g{
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 24px 0px 24px;
   }
   
   footer{
@@ -815,7 +955,7 @@ g{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(440px, auto);
     grid-column-gap:10px;
     max-width: 100%;
     padding: 10px 10px 0px 10px;
@@ -826,6 +966,15 @@ g{
     padding:0.5em;
     background-color: #F0F0F0
   }
+
+  .title-caption{
+    font-size:24px
+  }
+
+  .description-caption{
+    font-size:16px;
+  }
+  
   .contact-mail{
     font-size: 30px;
     font-weight: 700;
@@ -914,6 +1063,7 @@ g{
   }
   .logo-desktop-white-rotate{
     display: none;
+    padding-left:10px;
   }
 
   .margin-top80{
@@ -942,8 +1092,9 @@ g{
     margin:auto;
   }
   .paragraph-mobile{
-    padding: 24px 5% 16px 8%;
+    padding: 24px 0% 16px 0%;
     font-size: 18px;
+    line-height: 160%;
   }
 
   .title-mobile{
@@ -1000,7 +1151,7 @@ g{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    font-family: 'Roboto Condensed', sans-serif;;
+    font-family: "Plus Jakarta Sans", sans-serif, sans-serif;;
     font-weight: 500;
     font-size: 18px;
   }
@@ -1054,13 +1205,13 @@ g{
   .box-menu{
     display: inline-block;
     float: right;
-    padding:36px 36px 0px 0px;
   }
 
   .menu-hamburger {
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 32px 0px 40px;
   }
 
   h1{
@@ -1077,7 +1228,7 @@ g{
   }
 
   .hero-box{
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction:column-reverse;
     justify-content: center;
@@ -1097,9 +1248,8 @@ g{
   }
   
   .hero-message{
-    line-height: 48px;
-    font-weight: 500;
-    font-size: 48px;
+    font-weight: 800;
+    font-size: 80px;
     padding-bottom: 16px;
   }
 
@@ -1108,7 +1258,7 @@ g{
   }
 
   .hero-image{
-    width: 60%;
+    width: 100%;
     height: auto;
   }
 
@@ -1298,7 +1448,7 @@ g{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif, sans-serif;
     font-weight: 500;
     font-size: 18px;
   }
@@ -1337,7 +1487,7 @@ g{
 
 /* MAX WIDTH 699 PX  - END */
 
-@media only screen and (min-width:700px){
+@media only screen and (min-width:700px) {
   header{
     width: 100% !important;
     height: 88px;
@@ -1353,13 +1503,35 @@ g{
   .box-menu{
     display: inline-block;
     float: right;
-    padding:36px 36px 0px 0px;
   }
 
   .menu-hamburger {
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 32px 0px 40px;
+  }
+
+  .logo-desktop-white-rotate{
+    display: none;
+  }
+
+  .hero-box{
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    margin: auto;
+    text-align: left;
+    margin-top: 176px;
+    margin-bottom: 120px;
+    position: relative;
+    height: 35vh;
+  }
+
+  .hero-message {
+    font-size:80px
   }
 
   #content-right{
@@ -1367,10 +1539,15 @@ g{
     display: block;
     float: right;
   }
+  
+  .hero-image{
+    width: 100%;
+  }
 
   .single-box{
     margin: auto;
     width:70%;
+    max-width: 1000px;
   }
 
   .single-right-box{
@@ -1403,19 +1580,18 @@ g{
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(200px, auto);
-    grid-column-gap:10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, 600px);
+    grid-column-gap:20px;
     max-width: 84%;
-    padding: 10px 100px 0px 100px;
-    background-color: white;
+    padding: 10px 40px 0px 40px;
     margin:auto
   }
 
   .grid > div {
     padding:1em;
-    background-color: #F0F0F0
+    background-color:rgb(219,255,234);
   }
 
   .box1{
@@ -1443,23 +1619,23 @@ g{
   }
 
   .box5{
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
   }
 
   .box6 {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
+    grid-column: 1/5;
+    grid-row: 2/3;
   }
 
   .box7 {
-    grid-column: 3/3;
-    grid-row: 3/6;
+    grid-column: 1/5;
+    grid-row: 3/4;
   }
 
   .box8{
-    grid-column: 1 / 3;
-    grid-row: 4 / 6 ;
+    grid-column: 1/5;
+    grid-row: 4/5 ;
   }
 
   .description{
@@ -1515,9 +1691,9 @@ g{
   }
 
   .paragraph-mobile{
-    padding: 20px 20% 40px 20%;
+    padding: 20px 10% 40px 10%;
     font-size: 24px;
-    line-height: 140%;
+    line-height: 160%;
   }
 
   .title-mobile{
@@ -1577,7 +1753,7 @@ g{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif, sans-serif;
     font-weight: 500;
     font-size: 18px;
   }
@@ -1636,13 +1812,25 @@ g{
   .box-menu{
     display: inline-block;
     float: right;
-    padding:36px 36px 0px 0px;
+  }
+
+  .hero-box{
+    height: 65vh;
+  }
+
+  .hero-message {
+    font-size: 112px;
+  }
+
+  .hero-image{
+    max-width: 700px
   }
 
   .menu-hamburger{
     cursor:pointer;
     display: block;
     color: inherit;
+    margin:0px 32px 0px 40px;
   }
 
   .description {
@@ -1676,15 +1864,34 @@ g{
     padding: 100px 10px 0px 10px;
   }
 
-  .grid-single {
+  .grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(150px, auto);
-    grid-row-gap:20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
     max-width: 100%;
-    background-color: white
+    padding: 0px 100px 0px 100px;
+    background-color: white;
+    margin: auto;
   }
+
+  .box5{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .box6 {
+    grid-area: 1 / 2 / 2 / 3; 
+  }
+
+  .box7 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .box8{
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+
 
   .grid-single > div {
 
@@ -1707,7 +1914,7 @@ g{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif, sans-serif;
     font-weight: 500;
     font-size: 18px;
   }
@@ -1755,9 +1962,9 @@ g{
   }
 
   .paragraph-mobile{
-    padding: 0px 20% 60px 20%;
-    font-size: 28px;
-    line-height: 150%;
+    padding: 0px 10% 60px 10%;
+    font-size: 24px;
+    line-height: 175%;
   }
 
   .title-mobile{
