@@ -184,8 +184,9 @@ a {
 }
 
 .button-primary:active {
-	position:relative;
-	top:1px;
+	position:absolute;
+  bottom:32px;
+  left:32px;
 }
 
 .m-t-40{
@@ -604,7 +605,7 @@ a:hover{
 
 .pos-abs-0{
   position: absolute;
-  bottom: 32px;
+  bottom:32px;
   left:32px;
   cursor:pointer;
 }
