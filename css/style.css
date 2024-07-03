@@ -1840,6 +1840,10 @@ g{
     margin:0px 32px 0px 40px;
   }
 
+  .logo-desktop-white-rotate{
+    display: block;
+  }
+
   .description {
     font-size: 28px;
     color: #424242;
