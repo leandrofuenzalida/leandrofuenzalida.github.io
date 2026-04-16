@@ -93,7 +93,9 @@
         </p>
       </div>
         <div class="single-right-box flex-center lottie-desktop">
-        <dotlottie-player src="https://lottie.host/bbc89c5a-18e9-4383-8761-78d3a4f3aaae/dL7lOELO6A.lottie" background="transparent" speed="1" style="width: 95%; height: auto" direction="1" playMode="normal" loop controls autoplay></dotlottie-player>
+        <object class=".landing" data="/img/archdaily-landing.svg" type="image/svg+xml"></object>
+
+        <!-- <dotlottie-player src="https://lottie.host/bbc89c5a-18e9-4383-8761-78d3a4f3aaae/dL7lOELO6A.lottie" background="transparent" speed="1" style="width: 95%; height: auto" direction="1" playMode="normal" loop controls autoplay></dotlottie-player> -->
         <p class="photo-description">Landing page de ArchDaily Plus+</p>
     </div>
           <p class="paragraph-mobile">
@@ -155,8 +157,22 @@
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="/js/functions.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".landing", {
+        drawSVG: "0%",
+        scrollTrigger: {
+          trigger: "#anim",
+          start: "top center",
+          end: "bottom center",
+          scrub: true
+        }
+      });
+        
+    </script>
     // Accepts any class name
     var rellax = new Rellax('.rellax');
   </script>
