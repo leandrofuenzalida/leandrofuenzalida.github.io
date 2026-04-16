@@ -60,7 +60,7 @@ hamburguerMenu.addEventListener("click", function (e) {
   openNav();
 });
 
-// ✅ Detectar click fuera
+// detect click outside sidenav
 document.addEventListener("click", function (event) {
   var sidenav = document.getElementById("mySidenav");
 
