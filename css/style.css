@@ -963,6 +963,10 @@ g {
     margin-top: -200px;
   }
 
+  .featured-caption {
+    max-width: 100%;
+  }
+
   .content-1 {
     height: 280px;
     padding: 0px 10px 0px 10px;
@@ -998,11 +1002,11 @@ g {
   }
 
   .title-caption {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .description-caption {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .contact-mail {
@@ -1217,6 +1221,42 @@ g {
   }
 
   /* SIDEBAR END */
+}
+
+.button-primary {
+  display: inline-block;
+  background-color: #82ffb6;
+  text-indent: 0;
+  border: none;
+  color: #424242;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: oblique;
+  height: 40px;
+  line-height: 40px;
+  width: auto;
+  padding: 0px 28px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-primary:hover {
+  background-color: #31ff87;
+}
+
+.button-primary:active {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+}
+
+.content-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
 }
 
 /* MAX WIDTH 320 PX  - END */
