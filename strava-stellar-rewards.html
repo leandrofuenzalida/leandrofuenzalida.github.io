@@ -546,13 +546,22 @@
             try {
                 const response = await fetch('/api/strava-activities');
                 if (response.ok) {
+                    const data = await response.json();
                     state.stravaConnected = true;
+                    state.activities = data.activities || [];
+                    state.totalKm = data.totalDistance || 0;
+                    state.co2Saved = data.totalCO2 || 0;
+                    state.tokensBike = state.co2Saved * TOKENS_PER_CO2;
+                    state.walletAddress = generateWalletAddress();
                     updateStravaStatus();
+                    updateUI();
+                    console.log('✓ User already authenticated');
                     return true;
                 }
             } catch (err) {
-                console.log('No authenticated yet');
+                console.log('Not authenticated yet:', err.message);
             }
+            state.stravaConnected = false;
             return false;
         }
 
