@@ -2727,21 +2727,60 @@ body.zoom-mode {
   }
 
   /* Close control: always visible, pinned to the top-right corner
-     instead of the desktop's edge-of-screen slide-in arrow. */
+     instead of the desktop's edge-of-screen slide-in arrow. Kept small
+     since it only needs to be tappable, not a focal element. */
   .close-button {
     top: 16px;
     right: 16px;
     bottom: auto;
     transform: none;
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     background: rgba(0, 0, 0, 0.55);
     border-radius: 50%;
   }
 
   .close-button svg {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Main gallery: no draggable infinite canvas on mobile — just a plain
+     2-column grid of every image, flowing down the page with normal
+     scroll (see FashionGallery.initMobileGrid()). */
+  .viewport {
+    position: static;
+    margin: 40px 20px 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .canvas-wrapper {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-container {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-item {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Zoom-level controls don't apply to a plain scrolling grid */
+  .controls-container {
+    display: none;
   }
 }
 

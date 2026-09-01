@@ -35,7 +35,7 @@
   <meta name="theme-color" content="#ffffff">
   <!-- FAVICON -->
   <title>NON-CREATIVE - About Me</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="script" href="js/functions.js">
 </head>
 
@@ -535,7 +535,7 @@
               {
                 number: "05",
                 image: "img/graphic-design/Apptec-Diseno-de-Interfaces.jpg",
-                title: "Apptec — Diseño de Interfaces",
+                title: "Apptec — Diseño de Marca",
                 description:
                   "Pieza gráfica sobre transformación digital para la industria en Chile."
               },
@@ -558,14 +558,14 @@
                 image: "img/graphic-design/ADGlobal_ChooseWisely_ROS.gif",
                 title: "ArchDaily — Choose Wisely",
                 description:
-                  "Banner animado con texturas y patrones de materiales para campaña de marca."
+                  "Banner para la campaña Choose Wisely de productos de ArchDaily Global"
               },
               {
                 number: "09",
                 image: "img/graphic-design/AD-5EssentialArticles-01.gif",
                 title: "ArchDaily — 5 Essential Articles",
                 description:
-                  "Portada tipográfica para la serie semanal de artículos esenciales."
+                  "Portada tipográfica para RRSS de la serie semanal de artículos esenciales."
               },
               {
                 number: "10",
@@ -586,7 +586,7 @@
                 image: "img/graphic-design/Barragan_SaveTheDate.jpg",
                 title: "Barragán — Save the Date",
                 description:
-                  "Pieza isométrica en azul y rojo para invitación de evento."
+                  "Pieza isométrica en azul y rojo para invitación de evento para ArchDaily MX"
               },
               {
                 number: "13",
@@ -621,7 +621,7 @@
                 image: "img/graphic-design/adri-stuven-metete-en-tu-amor.jpg",
                 title: "Adri Stuven — Métete en tu Amor",
                 description:
-                  "Portada de single con doble exposición fotográfica en tono rosa."
+                  "Portada de single con doble exposición fotográfica en para Adri Stuven"
               },
               {
                 number: "18",
@@ -748,6 +748,41 @@
                 this.gridItems.push(itemData);
               }
             }
+          }
+          // Mobile: skip the draggable infinite-canvas entirely and render a
+          // plain 2-column grid with each real image once, flowing down the
+          // page with normal scroll. Tapping an image still opens the same
+          // full-screen zoom/detail view used on desktop.
+          initMobileGrid() {
+            this.gridContainer.innerHTML = "";
+            this.gridItems = [];
+            this.portfolioItems.forEach((portfolioItem, index) => {
+              const item = document.createElement("div");
+              item.className = "grid-item";
+              const img = document.createElement("img");
+              img.src = portfolioItem.image;
+              img.alt = portfolioItem.title;
+              item.appendChild(img);
+              const itemData = {
+                element: item,
+                img: img,
+                ...portfolioItem,
+                index: index
+              };
+              item.addEventListener("click", () => {
+                if (!this.zoomState.isActive) {
+                  this.soundSystem.play("click");
+                  this.enterZoomMode(itemData);
+                }
+              });
+              this.gridContainer.appendChild(item);
+              this.gridItems.push(itemData);
+            });
+            gsap.to(this.viewport, {
+              duration: 0.6,
+              opacity: 1,
+              ease: "power2.inOut"
+            });
           }
           setupViewportObserver() {
             if (this.viewportObserver) {
@@ -1471,11 +1506,16 @@
             });
           }
           init() {
+            this.isMobile = window.innerWidth <= 900;
+            gsap.set(this.viewport, { opacity: 0 });
+            if (this.isMobile) {
+              this.initMobileGrid();
+              this.closeButton.addEventListener("click", () => this.exitZoomMode());
+              return;
+            }
+
             this.config.currentGap = this.calculateGapForZoom(this.config.currentZoom);
             this.generateGridItems();
-
-            // Set initial opacity for viewport to hide the flash
-            gsap.set(this.viewport, { opacity: 0 });
 
             gsap.set(this.canvasWrapper, {
               scale: this.config.currentZoom
