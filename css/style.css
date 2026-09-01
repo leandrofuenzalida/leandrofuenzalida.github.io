@@ -2435,31 +2435,11 @@ body.zoom-mode {
   color: #fff;
 }
 
-/* Keeps the real site footer anchored to the bottom of the screen on the
-   gallery page, above the fixed full-bleed viewport/split-screen layers
-   (which don't add document height, so the footer would otherwise sit
-   in normal flow right under the title and be painted behind them). */
-.gallery-page-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-  transition: opacity 0.3s ease;
-}
-
-/* Hide it during zoom mode so the split-screen view can use the full screen */
-body.zoom-mode .gallery-page-footer {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .viewport {
-  position: fixed;
-  top: 360px;
-  left: 7%;
-  width: 86vw;
-  height: calc(100vh - 360px - 80px);
+  position: relative;
+  margin: 80px 7% 0;
+  width: 86%;
+  height: 80vh;
   overflow: hidden;
   z-index: 1;
   opacity: 0;
