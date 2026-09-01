@@ -1019,9 +1019,27 @@
               this.exitZoomMode();
             }
           }
+          // The gallery viewport is a contained box (not the full window), so all
+          // sizing/centering math must be based on its actual box, not window.innerWidth/Height.
+          getViewportSize() {
+            const rect = this.viewport.getBoundingClientRect();
+            return { vw: rect.width, vh: rect.height };
+          }
+          // Centers the canvas when it fits within the viewport; otherwise anchors it
+          // near the start (with a small margin) so the first row/column stays fully
+          // visible instead of being clipped by the viewport's overflow:hidden.
+          getAnchoredCenter(scaledWidth, scaledHeight) {
+            const { vw, vh } = this.getViewportSize();
+            const marginX = this.config.currentGap * this.config.currentZoom;
+            const marginY = this.config.currentGap * this.config.currentZoom;
+            const x =
+              scaledWidth <= vw ? (vw - scaledWidth) / 2 : marginX;
+            const y =
+              scaledHeight <= vh ? (vh - scaledHeight) / 2 : marginY;
+            return { x, y };
+          }
           calculateBounds() {
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
+            const { vw, vh } = this.getViewportSize();
             const { scaledWidth, scaledHeight } = this.gridDimensions;
             const marginX = this.config.currentGap * this.config.currentZoom;
             const marginY = this.config.currentGap * this.config.currentZoom;
@@ -1106,8 +1124,9 @@
             }
           }
           calculateFitZoom() {
-            const vw = window.innerWidth;
-            const vh = window.innerHeight - 80;
+            const { vw: viewportW, vh: viewportH } = this.getViewportSize();
+            const vw = viewportW;
+            const vh = viewportH - 80;
             const currentGap = this.calculateGapForZoom(1.0);
             const gridWidth =
               this.config.cols * (this.config.itemSize + currentGap) - currentGap;
@@ -1122,10 +1141,11 @@
             return Math.max(0.1, Math.min(2.0, fitZoom));
           }
           playIntroAnimation() {
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
-            const screenCenterX = vw / 2;
-            const screenCenterY = vh / 2;
+            const vpRect = this.viewport.getBoundingClientRect();
+            const vpWidth = vpRect.width;
+            const vpHeight = vpRect.height;
+            const screenCenterX = vpRect.left + vpWidth / 2;
+            const screenCenterY = vpRect.top + vpHeight / 2;
             const canvasStyle = getComputedStyle(this.canvasWrapper);
             const canvasMatrix = new DOMMatrix(canvasStyle.transform);
             const canvasX = canvasMatrix.m41;
@@ -1241,14 +1261,14 @@
             const newGap = this.calculateGapForZoom(fitZoom);
             this.soundSystem.play(fitZoom < 0.6 ? "zoom-out" : "zoom-in");
             this.calculateGridDimensions(this.config.currentGap);
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
             const currentScaledWidth =
               this.gridDimensions.width * this.config.currentZoom;
             const currentScaledHeight =
               this.gridDimensions.height * this.config.currentZoom;
-            const centerX = (vw - currentScaledWidth) / 2;
-            const centerY = (vh - currentScaledHeight) / 2;
+            const { x: centerX, y: centerY } = this.getAnchoredCenter(
+              currentScaledWidth,
+              currentScaledHeight
+            );
             gsap.to(this.canvasWrapper, {
               duration: 0.6,
               x: centerX,
@@ -1283,8 +1303,10 @@
                 this.calculateGridDimensions(newGap);
                 const finalScaledWidth = this.gridDimensions.width * fitZoom;
                 const finalScaledHeight = this.gridDimensions.height * fitZoom;
-                const finalCenterX = (vw - finalScaledWidth) / 2;
-                const finalCenterY = (vh - finalScaledHeight) / 2;
+                const { x: finalCenterX, y: finalCenterY } = this.getAnchoredCenter(
+                  finalScaledWidth,
+                  finalScaledHeight
+                );
                 gsap.to(this.canvasWrapper, {
                   duration: 1.2,
                   scale: fitZoom,
@@ -1323,12 +1345,12 @@
             this.config.currentZoom = zoomLevel;
             this.soundSystem.play(zoomLevel < oldZoom ? "zoom-out" : "zoom-in");
             this.calculateGridDimensions(this.config.currentGap);
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
             const currentScaledWidth = this.gridDimensions.width * oldZoom;
             const currentScaledHeight = this.gridDimensions.height * oldZoom;
-            const centerX = (vw - currentScaledWidth) / 2;
-            const centerY = (vh - currentScaledHeight) / 2;
+            const { x: centerX, y: centerY } = this.getAnchoredCenter(
+              currentScaledWidth,
+              currentScaledHeight
+            );
             gsap.to(this.canvasWrapper, {
               duration: 0.6,
               x: centerX,
@@ -1363,8 +1385,10 @@
                 this.calculateGridDimensions(newGap);
                 const finalScaledWidth = this.gridDimensions.width * zoomLevel;
                 const finalScaledHeight = this.gridDimensions.height * zoomLevel;
-                const finalCenterX = (vw - finalScaledWidth) / 2;
-                const finalCenterY = (vh - finalScaledHeight) / 2;
+                const { x: finalCenterX, y: finalCenterY } = this.getAnchoredCenter(
+                  finalScaledWidth,
+                  finalScaledHeight
+                );
                 gsap.to(this.canvasWrapper, {
                   duration: 1.2,
                   scale: zoomLevel,
@@ -1401,11 +1425,11 @@
               return;
             }
             this.calculateGridDimensions(this.config.currentGap);
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
             const { scaledWidth, scaledHeight } = this.gridDimensions;
-            const centerX = (vw - scaledWidth) / 2;
-            const centerY = (vh - scaledHeight) / 2;
+            const { x: centerX, y: centerY } = this.getAnchoredCenter(
+              scaledWidth,
+              scaledHeight
+            );
             gsap.to(this.canvasWrapper, {
               duration: 1.0,
               x: centerX,
@@ -1429,11 +1453,11 @@
               scale: this.config.currentZoom
             });
             this.calculateGridDimensions(this.config.currentGap);
-            const vw = window.innerWidth;
-            const vh = window.innerHeight;
             const { scaledWidth, scaledHeight } = this.gridDimensions;
-            const centerX = (vw - scaledWidth) / 2;
-            const centerY = (vh - scaledHeight) / 2;
+            const { x: centerX, y: centerY } = this.getAnchoredCenter(
+              scaledWidth,
+              scaledHeight
+            );
             gsap.set(this.canvasWrapper, {
               x: centerX,
               y: centerY
@@ -1452,20 +1476,6 @@
               ease: "power2.inOut",
               onComplete: () => {
                 this.playIntroAnimation();
-
-                gsap.to(".header", {
-                  duration: 1.2,
-                  opacity: 1,
-                  ease: "power2.out",
-                  delay: 0.8
-                });
-
-                gsap.to(".footer", {
-                  duration: 1.4,
-                  opacity: 1,
-                  ease: "power2.out",
-                  delay: 1
-                });
 
                 setTimeout(() => {
                   this.initDraggable();
