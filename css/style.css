@@ -2699,6 +2699,50 @@ body.zoom-mode {
   .description-line {
     font-size: 14px;
   }
+
+  /* Zoomed project view: single full-screen panel instead of the
+     desktop 50/50 split, so the image gets the whole screen. Combined
+     with object-fit:contain + object-position:top below, a wide
+     (landscape/16:9+) image is pinned to the top at 100% width with
+     any letterboxing below it, while a tall image naturally fills
+     100% of the height instead (no vertical slack to letterbox). */
+  .split-screen-container {
+    flex-direction: column;
+  }
+
+  .split-left {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .split-right {
+    display: none;
+  }
+
+  .scaling-image-overlay img {
+    -o-object-position: top center;
+    object-position: top center;
+  }
+
+  /* Close control: always visible, pinned to the top-right corner
+     instead of the desktop's edge-of-screen slide-in arrow. */
+  .close-button {
+    top: 16px;
+    right: 16px;
+    bottom: auto;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+  }
+
+  .close-button svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Hide placeholder when active */
