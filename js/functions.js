@@ -42,18 +42,22 @@ document.addEventListener("click", function (event) {
 var didScroll;
 var lastScrollTop = 0;
 var delta = 20;
-var navbarHeight = $("header").outerHeight();
+var navbarHeight = 0;
 
-$(window).scroll(function (event) {
-  didScroll = true;
+document.addEventListener("DOMContentLoaded", function () {
+  navbarHeight = $("header").outerHeight();
+
+  $(window).scroll(function (event) {
+    didScroll = true;
+  });
+
+  setInterval(function () {
+    if (didScroll) {
+      hasScrolled();
+      didScroll = false;
+    }
+  }, 250);
 });
-
-setInterval(function () {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
 
 function hasScrolled() {
   var st = $(window).scrollTop();
@@ -70,10 +74,8 @@ function hasScrolled() {
     $(".logo-desktop-white-rotate").removeClass("remove-lateral-brand");
   } else {
     // Scroll Up
-    if (st + $(window).height() < $(document).height()) {
-      $("header").removeClass("nav-up").addClass("nav-down");
-      $(".logo-desktop-white-rotate").addClass("text-blur-out");
-    }
+    $("header").removeClass("nav-up").addClass("nav-down");
+    $(".logo-desktop-white-rotate").addClass("text-blur-out");
   }
 
   lastScrollTop = st;
