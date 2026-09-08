@@ -35,28 +35,11 @@
 	<!-- FAVICON -->
 	<title>NON-CREATIVE - Graphic Design - Chile California Council; Chile en la Frontera de la IA</title>
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="script" href="js/functions.js">
 </head>
 
 <body>
 	<div class="container-main">
-		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="/" class="categoria underline"><b>Home</b></a>
-			<p class="categoria"><b>Casos</b></p>
-			<a class="item-menu" href="/daaily-platforms.html">Daaily Platforms</a>
-			<a class="item-menu" href="/sairys.html">Sairys</a>
-			<a class="item-menu underline" href="/archdaily.html">ArchDaily</a>
-			<a class="item-menu" href="/backtrack-academy.html">Backtrack Academy</a>
-			<a class="item-menu" href="/servicerocket.html">ServiceRocket</a>
-			<a href="/graphic-design.html" class="categoria underline"><b>Diseño Gráfico</b></a>
-			<a class="item-menu" href="/design/adri-stuven-rulo.html">Adri Stuven & Rulo</a>
-			<a class="item-menu" href="/design/chile-california-council.html">Chile California Council</a>
-			<a class="item-menu" href="/design/apptec.html">Apptec</a>
-			<a class="item-menu" href="/design/finctoc-shockpay.html">Fintoc | ShockPay</a>
-			<a href="/index.html#contact" class="categoria"><b>Contacto</b></a>
-			<a href="/about.html" class="categoria"><b>About Me</b></a>
-		</div>
+		<div id="mySidenav" class="sidenav"><!-- Sidenav JS --></div>
 		<header id="nav-scroll" data-nav-status="toggle">
 			<a class="linklogo" href="/index.html">
 				<h1 class="logo-desktop">
@@ -70,6 +53,7 @@
 						<a class="lang underline" href="/design/apptec.html">es</a>
 					</div>
 					<img class="menu-hamburger" src="/img/menusandwich.svg" alt="">
+
 				</div>
 			</div>
 		</header>
@@ -87,18 +71,22 @@
 				</picture>
 			</div>
 			<div class="single-box">
-				<a class="breadcrumbs" href="/index.html">« Home</a> / <a class="breadcrumbs" href="/design/index.html">
-					Design</a> / Apptec
+				<a class="breadcrumbs" href="/index.html">Home</a> / <a class="breadcrumbs"
+					href="/design/visual-design.html">Visual Design</a>
+				/ Apptec
 				<h1 class="title-mobile">Desarrollo de Marca + Diseño Web</h1>
 				<h2 class="brand-mobile">Apptec</h2>
 				<p class="paragraph-mobile">Desarrollo integral de identidad visual y sistema de marca para Apptec,
 					empresa especializada en soluciones de software a medida, aplicaciones móviles e inteligencia de
 					negocios.<br><br>
 					El proyecto abarcó la creación de un sistema de diseño robusto que comunicara profesionalismo,
-					innovación y confianza. Se diseñó una identidad coherente que se aplicó en el sitio web responsivo,
-					componentes de UI, mockups para presentaciones, y un manual de marca que permitiera la escalabilidad
+					innovación y confianza. Se diseñó una identidad coherente que se aplicó en el sitio web
+					responsivo,
+					componentes de UI, mockups para presentaciones, y un manual de marca que permitiera la
+					escalabilidad
 					de la identidad en diferentes medios.<br><br>
-					El sitio web se desarrolló considerando la experiencia del usuario, jerarquía visual clara, y una
+					El sitio web se desarrolló considerando la experiencia del usuario, jerarquía visual clara, y
+					una
 					navegación intuitiva que reflejara los servicios de la empresa y facilitara el contacto con
 					potenciales clientes.
 				</p>
@@ -122,10 +110,10 @@
 		</div>
 		<div class="control-projects">
 			<div class="item-flex">
-				<a href="/sairys.html">« Caso Anterior</a>
+				<a href="/design/fintoc-shockpay.html">« Caso Anterior</a>
 			</div>
 			<div class="item-flex">
-				<a href="/backtrack-academy.html">Siguiente Caso »</a>
+				<a href="/design/chile-california-council.html">Siguiente Caso »</a>
 			</div>
 		</div>
 		<div class="footer control-projects">
@@ -141,13 +129,9 @@
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+	<script src="/js/sidenav-data.js"></script>
 	<script src="/js/functions.js"></script>
-	<script src="/js/rellax.js"></script>
-	<script>
-		// Accepts any class name
-		var rellax = new Rellax('.rellax');
-	</script>
+
 </body>
 
 </html>

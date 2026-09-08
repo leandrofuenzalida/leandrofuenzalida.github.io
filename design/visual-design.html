@@ -36,39 +36,40 @@
   <!-- FAVICON -->
   <title>NON-CREATIVE - Diseño Gráfico</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="script" href="js/functions.js">
   <style>
     /* Override grid row positioning for design index (no featured item) */
     .box2 {
       grid-row: 1 / 2 !important;
     }
+
     .box3 {
       grid-row: 1 / 2 !important;
     }
+
     .box4 {
       grid-row: 2 / 3 !important;
     }
+
     .box5 {
       grid-row: 2 / 3 !important;
+    }
+
+    /* Reset grid rows on mobile - single column stacking */
+    @media only screen and (max-width: 700px) {
+
+      .box2,
+      .box3,
+      .box4,
+      .box5 {
+        grid-row: auto !important;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container-main">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="/" class="categoria underline"><b>Home</b></a>
-      <p class="categoria"><b>Casos</b></p>
-      <a class="item-menu" href="/daaily-platforms.html">Daaily Platforms</a>
-      <a class="item-menu" href="/sairys.html">Sairys</a>
-      <a class="item-menu" href="/archdaily.html">ArchDaily</a>
-      <a class="item-menu" href="/backtrack-academy.html">Backtrack Academy</a>
-      <a class="item-menu" href="/servicerocket.html">ServiceRocket</a>
-      <a href="/graphic-design.html" class="categoria underline"><b>Diseño Gráfico</b></a>
-      <a href="/index.html#contact" class="categoria underline"><b>Contacto</b></a>
-      <a href="/about.html" class="categoria"><b>About Me</b></a>
-    </div>
+    <div id="mySidenav" class="sidenav"><!-- Sidenav JS --></div>
     <header id="nav-scroll" data-nav-status="toggle">
       <a class="linklogo" href="/index.html">
         <h1 class="logo-desktop">
@@ -78,15 +79,15 @@
       <div class="box-menu">
         <div class="flex-hor">
           <div>
-            <a class="lang" href="/eng/graphic-design.html">en</a> |
-            <a class="lang underline" href="/graphic-design.html">es</a>
+            <a class="lang" href="/eng/design/visual-design.html">en</a> |
+            <a class="lang underline" href="/visual-design.html">es</a>
           </div>
           <img class="menu-hamburger" src="/img/menusandwich.svg" alt="">
         </div>
       </div>
     </header>
     <div>
-      <h1 class="description-desktop-white-rotate">Diseño Gráfico</h1>
+      <h1 class="description-desktop-white-rotate">Visual Design</h1>
       <h2 class="logo-desktop-white-rotate remove-lateral-brand text-focus-in">
         <span class="non-white">NON</span>CREATIVE
       </h2>
@@ -96,8 +97,8 @@
       <div class="single-box">
         <div class="single-right-box">
         </div>
-        <a class="breadcrumbs" href="/index.html">« Home</a> / Diseño Gráfico
-        <h1 class="title-mobile">Diseño Gráfico</h1>
+        <a class="breadcrumbs" href="/index.html">« Home</a> / Visual Design
+        <h1 class="title-mobile">Visual Design</h1>
         <h2 class="brand-mobile">Brand Identity, Posters, Cover Arts, Concert Posters, illustrations</h2>
         <p class="paragraph-mobile">Una colección diversa de trabajos de diseño gráfico, incluyendo afiches,
           identidades, tipografía, composiciones y otros experimentos visuales. Sin un orden particular, solo una
@@ -106,69 +107,57 @@
       </div>
       <div id="portfolio" class="grid">
         <div class="box2">
-          <a class="box-artwork" href="/sairys.html">
+          <a class="box-artwork" href="/design/fintoc-shockpay.html">
             <div class="caption-link">
-              <h1 class="title-caption">Sayris: una Web App de gestión de candidatos</h1>
-              <p class="description-caption">Smartjob construyó su propio sistema de seguimiento de candidatos (ATS).
-                Como
-                Diseñador de Producto, optimicé su Web App para haer mas eficientes sus procesos. Explora cómo
-                trabajamos y
-                las mejoras que implementamos.</p>
-              <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+              <h1 class="title-caption">Desarrollo de Marca y Desarrollo Webflow para Fintoc</h1>
+              <p class="description-caption"></p>
+              <button class="button-primary m-t-40 pos-abs-0">ver más</button>
             </div>
             <picture>
               <img class="box-artwork" src="/img/fintoc-shockpay-hero.jpg"
-                alt="Illustration for Get on Board, here we see two developers working on a project ©Leandro Fuenzalida">
+                alt="Desarrollo de Marca y Desarrollo Webflow para Fintoc ©Leandro Fuenzalida">
             </picture>
           </a>
         </div>
         <div class="box3">
-          <a class="box-artwork" href="/archdaily.html">
+          <a class="box-artwork" href="/design/apptec.html">
             <div class="caption-link">
-              <h1 class="title-caption">Hype Designer: Potenciando la Identidad de Marca en ArchDaily</h1>
-              <p class="description-caption">Con el cargo de "Hype Designer", fuí responsable de gestionar y ejecutar en
-                360° la identidad visual, incluídas instancias de Mailing, gestión de anuncios e iniciativas de Diseño
-                UX.
-              </p>
-              <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+              <h1 class="title-caption">Desarrollo de Marca y Diseño UI para APPTEC</h1>
+              <p class="description-caption"></p>
+              <button class="button-primary m-t-40 pos-abs-0">ver más</button>
             </div>
             <picture>
               <source srcset="/img/apptec-hero-image.png">
               <img class="box-artwork" src="/img/apptec-hero-image.png"
-                alt="Casa Gilardi Illustration ©Leandro Fuenzalida">
+                alt="Desarrollo de Marca y Diseño UI para APPTEC ©Leandro Fuenzalida">
             </picture>
           </a>
         </div>
         <div class="box4">
-          <a class="box-artwork" href="/backtrack-academy.html">
+          <a class="box-artwork" href="/design/chile-california-council.html">
             <div class="caption-link">
-              <h1 class="title-caption">Product Designer en Backtrack Academy</h1>
-              <p class="description-caption">Backtrack Academy, una startup chilena de educación en Hacking Ético con
-                más de
-                50 mil usuarios, me contrataron como Diseñador de Productos para optimizar la experiencia de usuario y
-                aumentar la participación en su plataforma.</p>
-              <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+              <h1 class="title-caption">Identidad Visual para Chile California Council</h1>
+              <p class="description-caption"></p>
+              <button class="button-primary m-t-40 pos-abs-0">ver más</button>
             </div>
             <picture>
-              <source srcset="/img/ Backtrack-Academy.jpg">
+              <source srcset="/img/ChileCaliforniaCouncil-ChileEnLaFronteraDeLaIA.png">
               <img class="box-artwork" src="/img/ChileCaliforniaCouncil-ChileEnLaFronteraDeLaIA.png"
-                alt="Caso Apptec Ltda ©Leandro Fuenzalida">
+                alt="Identidad Visual para Chile California Council ©Leandro Fuenzalida">
             </picture>
           </a>
         </div>
         <div class="box5">
-          <a class="box-artwork" href="/servicerocket.html">
+          <a class="box-artwork" href="/design/adri-stuven-rulo.html">
             <div class="caption-link">
-              <h1 class="title-caption">UXD & Webflow Dev en ServiceRocket</h1>
-              <p class="description-caption">Usando Miro, Figma y Webflow, colaboré estrechamente con gerentes de
-                marketing
-                de productos, product owners, redactores de contenido, diseñadores y especialistas en marketing para
-                presentar servicios y productos de ServiceRocket en experiencias web excepcionales.</p>
-              <button class="button-primary m-t-40 pos-abs-0">leer más</button>
+              <h1 class="title-caption">Identidad Visual + Artwork de Álbum para Adri Stuven & RULO</h1>
+              <p class="description-caption"></p>
+              <button class="button-primary m-t-40 pos-abs-0">ver más</button>
             </div>
             <picture>
               <source srcset="/img/AdriStuvenRulo-CumbiaPerdida.png">
-              <img class="box-artwork" src="/img/AdriStuvenRulo-CumbiaPerdida.png" alt="Open Graph de ServiceRocket">
+              <img class="box-artwork" src="/img/AdriStuvenRulo-CumbiaPerdida.png"
+                alt="Identidad Visual + Artwork de Álbum para Adri Stuven ©Leandro Fuenzalida ">
             </picture>
           </a>
         </div>
@@ -187,13 +176,9 @@
     </div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+  <script src="/js/sidenav-data.js"></script>
   <script src="/js/functions.js"></script>
-  <script src="/js/rellax.js"></script>
-  <script>
-    // Accepts any class name
-    var rellax = new Rellax('.rellax');
-  </script>
+
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -24,7 +24,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Description" content="Graphic Design gallery - Brand identities, posters, illustrations, and visual experiments">
+  <meta name="Description"
+    content="Graphic Design gallery - Brand identities, posters, illustrations, and visual experiments">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- FAVICON -->
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
@@ -36,18 +37,20 @@
   <!-- FAVICON -->
   <title>NON-CREATIVE - Graphic Design Gallery</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="script" href="js/functions.js">
   <style>
     /* Override grid row positioning for design index (no featured item) */
     .box2 {
       grid-row: 1 / 2 !important;
     }
+
     .box3 {
       grid-row: 1 / 2 !important;
     }
+
     .box4 {
       grid-row: 2 / 3 !important;
     }
+
     .box5 {
       grid-row: 2 / 3 !important;
     }
@@ -56,26 +59,9 @@
 
 <body>
   <div class="container-main">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="/eng/index.html" class="categoria underline"><b>Home</b></a>
-      <p class="categoria"><b>Cases</b></p>
-      <a class="item-menu" href="/eng/daaily-platforms.html">Daaily Platforms</a>
-      <a class="item-menu" href="/eng/sairys.html">Sairys</a>
-      <a class="item-menu" href="/eng/archdaily.html">ArchDaily</a>
-      <a class="item-menu" href="/eng/backtrack-academy.html">Backtrack Academy</a>
-      <a class="item-menu" href="/eng/servicerocket.html">ServiceRocket</a>
-      <a href="/eng/graphic-design.html" class="categoria underline"><b>Graphic Design</b></a>
-      <a class="item-menu" href="/eng/design/adri-stuven-rulo.html">Adri Stuven & Rulo</a>
-      <a class="item-menu" href="/eng/design/chile-california-council.html">Chile California Council</a>
-      <a class="item-menu" href="/eng/design/apptec.html">Apptec</a>
-      <a class="item-menu" href="/eng/design/fintoc-shockpay.html">Fintoc | ShockPay</a>
-      <a class="item-menu underline" href="/eng/design/index.html">Design Gallery</a>
-      <a href="/eng/index.html#contact" class="categoria underline"><b>Contact</b></a>
-      <a href="/eng/about.html" class="categoria"><b>About Me</b></a>
-    </div>
+    <div id="mySidenav" class="sidenav"><!-- Sidenav JS --></div>
     <header id="nav-scroll" data-nav-status="toggle">
-      <a class="linklogo" href="/eng/index.html">
+      <a class="linklogo" href="/index.html">
         <h1 class="logo-desktop">
           <span class="non">NON</span>CREATIVE
         </h1>
@@ -83,15 +69,15 @@
       <div class="box-menu">
         <div class="flex-hor">
           <div>
-            <a class="lang underline" href="/eng/design/index.html">en</a> |
-            <a class="lang" href="/design/index.html">es</a>
+            <a class="lang underline" href="/eng/design/visual-design.html">en</a> |
+            <a class="lang" href="/design/visual-design.html">es</a>
           </div>
           <img class="menu-hamburger" src="/img/menusandwich.svg" alt="">
         </div>
       </div>
     </header>
     <div>
-      <h1 class="description-desktop-white-rotate">Graphic Design</h1>
+      <h1 class="description-desktop-white-rotate">Visual Design</h1>
       <h2 class="logo-desktop-white-rotate remove-lateral-brand text-focus-in">
         <span class="non-white">NON</span>CREATIVE
       </h2>
@@ -101,11 +87,12 @@
       <div class="single-box">
         <div class="single-right-box">
         </div>
-        <a class="breadcrumbs" href="/eng/index.html">« Home</a> / <a class="breadcrumbs" href="/eng/design/index.html">Design</a> / Graphic Design Gallery
-        <h1 class="title-mobile">Graphic Design</h1>
+        <a class="breadcrumbs" href="/eng/index.html">« Home</a> / Visual Design
+        <h1 class="title-mobile">Visual Design</h1>
         <h2 class="brand-mobile">Brand Identity, Posters, Cover Arts, Concert Posters, Illustrations</h2>
         <p class="paragraph-mobile">An assorted collection of graphic design work, including posters, identities,
-          typography, compositions and other visual experiments. No particular order, just a selection of things I've made along the way.
+          typography, compositions and other visual experiments. No particular order, just a selection of things I've
+          made along the way.
         </p>
       </div>
       <div id="portfolio" class="grid">
@@ -191,13 +178,9 @@
     </div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+  <script src="/js/sidenav-data.js"></script>
   <script src="/js/functions.js"></script>
-  <script src="/js/rellax.js"></script>
-  <script>
-    // Accepts any class name
-    var rellax = new Rellax('.rellax');
-  </script>
+
 </body>
 
 </html>
