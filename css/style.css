@@ -688,8 +688,8 @@ g {
   top: 0;
   right: 0;
   background-color: #1c1c1c;
-  overflow-x: hidden;
-  transition: 0.5s;
+  overflow: hidden;
+  transition: width 0.5s ease;
   padding-top: 60px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 300;
@@ -700,12 +700,12 @@ g {
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: inline-block;
-  transition: 0.2s;
-  font-weight: 300;
   font-size: 18px;
+  color: white;
+  display: block;
+  white-space: nowrap;
+  font-weight: 300;
+  box-sizing: border-box;
 }
 
 .underline {
@@ -743,6 +743,16 @@ g {
 .sidenav .item-menu {
   font-size: 18px;
   line-height: 150%;
+}
+
+.item-menu:hover {
+  color: #82ffb7;
+}
+
+.item-menu.current {
+  text-decoration: solid 1px #82ffb7;
+  color: #82ffb7;
+  font-weight: 600;
 }
 
 .nav-up {
@@ -1623,6 +1633,10 @@ g {
   .single-right-box {
     padding: 24px 3%;
     text-align: left;
+  }
+
+  .rounded-32px {
+    border-radius: 32px;
   }
 
   .grid {

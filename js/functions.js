@@ -42,21 +42,25 @@ document.addEventListener("click", function (event) {
 var didScroll;
 var lastScrollTop = 0;
 var delta = 20;
-var navbarHeight = $("header").outerHeight();
+var navbarHeight = 0;
 
-$(window).scroll(function (event) {
-  didScroll = true;
+document.addEventListener("DOMContentLoaded", function () {
+  navbarHeight = $("header").outerHeight();
+
+  $(window).scroll(function (event) {
+    didScroll = true;
+  });
+
+  setInterval(function () {
+    if (didScroll) {
+      hasScrolled();
+      didScroll = false;
+    }
+  }, 250);
 });
 
-setInterval(function () {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
 function hasScrolled() {
-  var st = $(this).scrollTop();
+  var st = $(window).scrollTop();
 
   // Make sure they scroll more than delta
   if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -70,10 +74,8 @@ function hasScrolled() {
     $(".logo-desktop-white-rotate").removeClass("remove-lateral-brand");
   } else {
     // Scroll Up
-    if (st + $(window).height() < $(document).height()) {
-      $("header").removeClass("nav-up").addClass("nav-down");
-      $(".logo-desktop-white-rotate").addClass("text-blur-out");
-    }
+    $("header").removeClass("nav-up").addClass("nav-down");
+    $(".logo-desktop-white-rotate").addClass("text-blur-out");
   }
 
   lastScrollTop = st;
@@ -88,3 +90,41 @@ document.addEventListener("DOMContentLoaded", function () {
     element.classList.add("show");
   }, 200);
 });
+
+function detectLanguage() {
+  const path = window.location.pathname;
+  return path.startsWith("/eng") ? "en" : "es";
+}
+
+function renderSidenav() {
+  const lang = detectLanguage();
+  const data = sidenavData[lang];
+  const sidenav = document.getElementById("mySidenav");
+
+  if (!sidenav) return;
+
+  sidenav.innerHTML = `
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="${data.home.href}" class="categoria underline"><b>${data.home.label}</b></a>
+
+    <p class="categoria"><b>${data.cases}</b></p>
+    ${data.projects.map((p) => `<a class="item-menu" href="${p.href}">${p.label}</a>`).join("")}
+
+    <a href="${data.visualDesign.href}" class="categoria underline"><b>${data.visualDesign.label}</b></a>
+    ${data.designs.map((d) => `<a class="item-menu" href="${d.href}">${d.label}</a>`).join("")}
+
+    <a href="${data.contact.href}" class="categoria"><b>${data.contact.label}</b></a>
+    <a href="${data.about.href}" class="categoria"><b>${data.about.label}</b></a>
+  `;
+
+  // Marcar el link actual como "current"
+  const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+  document.querySelectorAll(".sidenav .item-menu").forEach((link) => {
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, "") || "/";
+    if (linkPath === currentPath) {
+      link.classList.add("current");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderSidenav);
