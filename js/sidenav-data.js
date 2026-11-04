@@ -14,12 +14,12 @@ const sidenavData = {
       href: "/design/visual-design.html",
     },
     designs: [
-      { label: "Fintoc | ShockPay", href: "/design/fintoc-shockpay.html" },
-      { label: "Apptec", href: "/design/apptec.html" },
       {
         label: "Chile California Council",
         href: "/design/chile-california-council.html",
       },
+      { label: "Fintoc | ShockPay", href: "/design/fintoc-shockpay.html" },
+      { label: "Apptec", href: "/design/apptec.html" },
       { label: "Adri Stuven & Rulo", href: "/design/adri-stuven-rulo.html" },
     ],
     contact: { label: "Contacto", href: "/index.html#contact" },
@@ -40,12 +40,12 @@ const sidenavData = {
       href: "/eng/design/visual-design.html",
     },
     designs: [
-      { label: "Fintoc | ShockPay", href: "/eng/design/fintoc-shockpay.html" },
-      { label: "Apptec", href: "/eng/design/apptec.html" },
       {
         label: "Chile California Council",
         href: "/eng/design/chile-california-council.html",
       },
+      { label: "Fintoc | ShockPay", href: "/eng/design/fintoc-shockpay.html" },
+      { label: "Apptec", href: "/eng/design/apptec.html" },
       {
         label: "Adri Stuven & Rulo",
         href: "/eng/design/adri-stuven-rulo.html",
