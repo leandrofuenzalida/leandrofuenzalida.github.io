@@ -1971,6 +1971,12 @@ g {
     height: auto;
     object-fit: contain;
     display: block;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .max-width-m {
+    width: 60%;
   }
 
   .paragraph-mobile {
