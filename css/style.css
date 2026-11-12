@@ -1711,6 +1711,18 @@ g {
     grid-row: 4 / 5;
   }
 
+  /* iPad: una columna en el grid de index y visual-design */
+  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .grid > div {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
+  }
+
   input {
     display: block;
     width: 100%;
