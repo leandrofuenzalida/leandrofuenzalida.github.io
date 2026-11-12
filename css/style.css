@@ -585,7 +585,7 @@ a:hover {
 
 .title-caption {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 46px;
+  font-size: 38px;
   font-weight: 800;
   text-transform: uppercase;
   font-style: italic;
@@ -594,7 +594,7 @@ a:hover {
 
 .description-caption {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 160%;
   color: #424242;
 }
@@ -1280,6 +1280,10 @@ g {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 481px) and (max-width: 699px) {
+  .title-caption {
+    font-size: 28px;
+  }
+
   header {
     width: 100% !important;
     height: 88px;
