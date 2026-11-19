@@ -1635,7 +1635,7 @@ g {
 
   .single-box {
     margin: auto;
-    width: 70%;
+    width: 90%;
     max-width: 1000px;
   }
 
@@ -1767,8 +1767,8 @@ g {
 
   .paragraph-mobile {
     padding: 20px 10% 40px 10%;
-    font-size: 24px;
-    line-height: 160%;
+    font-size: 21px;
+    line-height: 143%;
   }
 
   .title-mobile {
